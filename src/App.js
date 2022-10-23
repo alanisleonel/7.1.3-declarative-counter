@@ -1,9 +1,18 @@
+import React from 'react'
+import {useState} from 'react'
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  // Invoking the useState function.
+  let [ counter, changeCounter ] = useState(1)
+  window.changeCounter = changeCounter
   return (
-    <div className="App">
+    <div>
+      <h1>{counter}</h1>
+      <h4>{counter}</h4>
+    </div>
+    /*<div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,8 +27,8 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
-  );
+    </div>*/
+  )
 }
 
 export default App;
